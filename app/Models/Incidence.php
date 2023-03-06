@@ -2,6 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Area;
+use App\Models\State;
+use App\Models\Category;
+use App\Models\Location;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -49,6 +53,26 @@ class Incidence extends Model
     public function user()
     {
         return $this->hasOne('App\Models\User', 'id', 'user_id');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function state()
+    {
+        return $this->belongsTo(State::class);
+    }
+
+    public function area()
+    {
+        return $this->belongsTo(Area::class);
+    }
+
+    public function location()
+    {
+        return $this->belongsTo(Location::class);
     }
     
 
