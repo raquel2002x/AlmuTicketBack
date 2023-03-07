@@ -41,7 +41,7 @@ return new class extends Migration
 
             $table->unsignedBigInteger('id_state');
             $table->foreign('id_state')->references('id')->on('states')->onDelete('cascade')->onUpdate('cascade');
- 
+
             
         });
     }
