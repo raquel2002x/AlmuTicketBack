@@ -36,12 +36,13 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Description</th>
-										<th>User Id</th>
-										<th>Category Id</th>
-										<th>Program Id</th>
-										<th>Location Id</th>
-										<th>State Id</th>
+										
+										<th>Usuario</th>
+										<th>Categoria</th>
+										<th>Area</th>
+										<th>Sede</th>
+                                        <th>Descripcion</th>
+										<th>Estado</th>
 
                                         <th></th>
                                     </tr>
@@ -51,12 +52,12 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $incidence->description }}</td>
 											<td>{{ $incidence->user_id }}</td>
 											<td>{{ $incidence->category_id }}</td>
-											<td>{{ $incidence->program_id }}</td>
+											<td>{{ $incidence->area_id }}</td>
 											<td>{{ $incidence->location_id }}</td>
-											<td>{{ $incidence->state_id }}</td>
+                                            <td>{{ $incidence->description }}</td>
+                                            <td>{{ $incidence->state_id }}</td>
 
                                             <td>
                                                 <form action="{{ route('incidences.destroy',$incidence->id) }}" method="POST">
