@@ -20,10 +20,7 @@
 
                     <div class="card-body">
                         
-                        <div class="form-group">
-                            <strong>Description:</strong>
-                            {{ $incidence->description }}
-                        </div>
+                        
                         <div class="form-group">
                             <strong>User Id:</strong>
                             {{ $incidence->user_id }}
@@ -34,11 +31,15 @@
                         </div>
                         <div class="form-group">
                             <strong>Program Id:</strong>
-                            {{ $incidence->program_id }}
+                            {{ $incidence->area_id }}
                         </div>
                         <div class="form-group">
                             <strong>Location Id:</strong>
                             {{ $incidence->location_id }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Description:</strong>
+                            {{ $incidence->description }}
                         </div>
                         <div class="form-group">
                             <strong>State Id:</strong>
