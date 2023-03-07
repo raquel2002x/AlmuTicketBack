@@ -12,10 +12,10 @@
             {!! $errors->first('user_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('category_id') }}
-            {{ Form::text('category_id', $incidence->category_id, ['class' => 'form-control' . ($errors->has('category_id') ? ' is-invalid' : ''), 'placeholder' => 'Category Id']) }}
-            {!! $errors->first('category_id', '<div class="invalid-feedback">:message</div>') !!}
+            <label for="categoria">Categoría</label>
+            {!! Form::select('category_id', $categories, null, ['class' => 'form-control']) !!}
         </div>
+        
         <div class="form-group">
             {{ Form::label('program_id') }}
             {{ Form::text('program_id', $incidence->program_id, ['class' => 'form-control' . ($errors->has('program_id') ? ' is-invalid' : ''), 'placeholder' => 'Program Id']) }}

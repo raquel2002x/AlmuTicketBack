@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Incidence;
 use Illuminate\Http\Request;
 
@@ -32,7 +33,9 @@ class IncidenceController extends Controller
     public function create()
     {
         $incidence = new Incidence();
-        return view('incidence.create', compact('incidence'));
+        $categories = Category::pluck('name', 'id');
+        
+        return view('incidence.create', compact('incidence','categories'));
     }
 
     /**
@@ -46,6 +49,7 @@ class IncidenceController extends Controller
         request()->validate(Incidence::$rules);
 
         $incidence = Incidence::create($request->all());
+        
 
         return redirect()->route('incidences.index')
             ->with('success', 'Incidence created successfully.');

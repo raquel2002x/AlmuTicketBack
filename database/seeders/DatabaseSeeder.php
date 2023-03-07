@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Category;
+use Illuminate\Database\Seeder;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -18,5 +20,22 @@ class DatabaseSeeder extends Seeder
              'name' => 'Coders',
              'email' => 'coders@arrabalempleo.org',
          ]);
+
+        Category::create([
+            'name' => 'Apoyo a Programas',
+        ]);
+        Category::create([
+            'name' => 'Informatica',
+        ]);
+        Category::create([
+            'name' => 'Limpieza',
+        ]);
+        Category::create([
+            'name' => 'Mantenimiento',
+        ]);
+        Category::create([
+            'name' => 'Materiales',
+        ]);
+        
     }
 }
