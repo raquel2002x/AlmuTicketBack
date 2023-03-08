@@ -57,7 +57,11 @@ class IncidenceController extends Controller
         request()->validate(Incidence::$rules);
 
         $incidence = Incidence::create($request->all());
-        
+        $users = User::pluck('name', 'id');
+        $categories = Category::pluck('name', 'id');
+        $states = State::pluck('name', 'id');
+        $locations = Location::pluck('name', 'id');
+        $areas = Area::pluck('name', 'id');
 
         return redirect()->route('incidences.index')
             ->with('success', 'Incidence created successfully.');
@@ -85,7 +89,12 @@ class IncidenceController extends Controller
     public function edit($id)
     {
         $incidence = Incidence::find($id);
-
+        $users = User::pluck('name', 'id');
+        $categories = Category::pluck('name', 'id');
+        $states = State::pluck('name', 'id');
+        $locations = Location::pluck('name', 'id');
+        $areas = Area::pluck('name', 'id');
+        
         return view('incidence.edit', compact('incidence'));
     }
 
