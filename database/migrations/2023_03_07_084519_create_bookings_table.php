@@ -29,18 +29,18 @@ return new class extends Migration
             $table->string('comment')->nullable();
             
 
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');           
+            //$table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');           
 
 
-            $table->unsignedBigInteger('id_area');
-            $table->foreign('id_area')->references('id')->on('areas')->onDelete('cascade')->onUpdate('cascade');
+            //$table->unsignedBigInteger('area_id');
+            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->unsignedBigInteger('id_location');
-            $table->foreign('id_location')->references('id')->on('locations')->onDelete('cascade')->onUpdate('cascade');
+            //$table->unsignedBigInteger('location_id');
+            $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->unsignedBigInteger('id_state');
-            $table->foreign('id_state')->references('id')->on('states')->onDelete('cascade')->onUpdate('cascade');
+//$table->unsignedBigInteger('state_id');
+            $table->foreign('state_id')->references('id')->on('states')->onDelete('cascade')->onUpdate('cascade');
  
             
         });

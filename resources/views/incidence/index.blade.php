@@ -39,7 +39,7 @@
 										<th>Description</th>
 										<th>User Id</th>
 										<th>Category Id</th>
-										<th>Program Id</th>
+										<th>Area Id</th>
 										<th>Location Id</th>
 										<th>State Id</th>
 
@@ -54,7 +54,7 @@
 											<td>{{ $incidence->description }}</td>
 											<td>{{ $incidence->user_id }}</td>
 											<td>{{ $incidence->category_id }}</td>
-											<td>{{ $incidence->program_id }}</td>
+											<td>{{ $incidence->area_id }}</td>
 											<td>{{ $incidence->location_id }}</td>
 											<td>{{ $incidence->state_id }}</td>
 

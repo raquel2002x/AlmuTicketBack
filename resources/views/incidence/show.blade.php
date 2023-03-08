@@ -33,8 +33,8 @@
                             {{ $incidence->category_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Program Id:</strong>
-                            {{ $incidence->program_id }}
+                            <strong>Area Id:</strong>
+                            {{ $incidence->area_id }}
                         </div>
                         <div class="form-group">
                             <strong>Location Id:</strong>

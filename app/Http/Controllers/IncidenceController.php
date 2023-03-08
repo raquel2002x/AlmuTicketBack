@@ -43,9 +43,11 @@ class IncidenceController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Incidence::$rules);
+        $request->validate(Incidence::$rules);
 
-        $incidence = Incidence::create($request->all());
+        $incidence = request()->except('_token');
+        Incidence::create($incidence);
+
 
         return redirect()->route('incidences.index')
             ->with('success', 'Incidence created successfully.');
@@ -57,9 +59,8 @@ class IncidenceController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Incidence $incidence)
     {
-        $incidence = Incidence::find($id);
 
         return view('incidence.show', compact('incidence'));
     }
@@ -86,7 +87,7 @@ class IncidenceController extends Controller
      */
     public function update(Request $request, Incidence $incidence)
     {
-        request()->validate(Incidence::$rules);
+        $request->validate(Incidence::$rules);
 
         $incidence->update($request->all());
 

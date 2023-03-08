@@ -8,7 +8,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('user_id') }}
-            {{ Form::text('user_id', $incidence->user_id, ['class' => 'form-control' . ($errors->has('user_id') ? ' is-invalid' : ''), 'placeholder' => 'User Id']) }}
+            {{ Form::text('user_id', $incidence->user_id, ['class' => 'form-control' . (($errors->has('user_id')) ? ' is-invalid' : ''), 'placeholder' => 'User Id']) }}
             {!! $errors->first('user_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -17,9 +17,9 @@
             {!! $errors->first('category_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('program_id') }}
-            {{ Form::text('program_id', $incidence->program_id, ['class' => 'form-control' . ($errors->has('program_id') ? ' is-invalid' : ''), 'placeholder' => 'Program Id']) }}
-            {!! $errors->first('program_id', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::label('area_id') }}
+            {{ Form::text('area_id', $incidence->area_id, ['class' => 'form-control' . ($errors->has('area_id') ? ' is-invalid' : ''), 'placeholder' => 'Area Id']) }}
+            {!! $errors->first('area_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('location_id') }}
@@ -36,4 +36,5 @@
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
+    {{ Form::close() }}
 </div>

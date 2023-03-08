@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property $description
  * @property $user_id
  * @property $category_id
- * @property $program_id
+ * @property $area_id
  * @property $location_id
  * @property $state_id
  *
@@ -32,7 +32,7 @@ class Incidence extends Model
 		'description' => 'required',
 		'user_id' => 'required',
 		'category_id' => 'required',
-		'program_id' => 'required',
+		'area_id' => 'required',
 		'location_id' => 'required',
 		'state_id' => 'required',
     ];
@@ -44,7 +44,7 @@ class Incidence extends Model
      *
      * @var array
      */
-    protected $fillable = ['description','user_id','category_id','program_id','location_id','state_id'];
+    protected $fillable = ['description','user_id','category_id','area_id','location_id','state_id'];
 
 
     /**
